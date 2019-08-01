@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to Four Legs or Fly™
 
-## Available Scripts
+We are an agency that employs experts in the field of 4-legged animals and birds, and we just hired you to build our recruiting site!
 
-In the project directory, you can run:
+Our candidates are provided to us through our partner [randomUser]("https://randomuser.me/api?results=10") and they give us 10 candidates at a time.
 
-### `npm start`
+As the developer, your job is to create a portal where our recruiter can view see a list of the candidates image, name and username.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+However, because we beleive firmly in a high standard of excellence, candidates that do not have a four-legged animal, or a bird in their username will be removed from consideration.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+# Project Initialization
 
-### `npm test`
+1. Fork and clone this repository
+1. Inside of the project directory, run `npm install` to install the dependencies.
+1. Verify the application is working by running `npm start`.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Project Tasks
 
-### `npm run build`
+The previous developer on this project didn't get too far before we found out they only liked snakes. So you'll pick up where they left off.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Currently, the greeting only says "Welcome!".  We would like that to display "Four Legs or Fly" instead.  However, this may change in the future. As such, the text should not be hardcoded in the component, it should be taken in as a prop. Get this done before moving on to other tasks.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+1. Next up, the application should show all 10 applicants from our partner when the page first loads. If it's taking a while to load the applicants, then "Loading..." should be displayed instead. In short, show either "Loading...", or the list of profiles when the component first mounts.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> A Profile consists of the candidates image, their name, and their username
 
-### `npm run eject`
+1. Finally, this is where we weed out the candidates that don't fit our vision.  If I see a username that doesn't have a four-legged animal or a bird in it then I should be able to click on the candiates image to remove them from the list. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> This is a manual process, so if I accidentally click on a person that _does_ have a 4-legged animal or bird, and that user disappears, that won't count against you and is considered my bad.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I had my designer create a mockup of what the application should look like once the candidates load up:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![mockup](src/images/four-legs-or-fly.jpeg)
