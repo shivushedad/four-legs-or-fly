@@ -9,17 +9,26 @@ class App extends Component {
   };
   componentDidMount() {
     getRandomUsers.then(userData => {
-      console.log(userData);
       this.setState({users : userData});
     })
   };
 
+  handleOnClickDiv = (e) => {
+    console.log("Removing " + e)
+    const newState = this.state.users.filter(user => user.name.first !== e)
+    this.setState({users: newState});
+  }
+
   render() {
     return (
       <main>
+        <header>
         <GreetingNav welcomeMessage = "Four Legs or Fly"/>
-        {this.state.users.map(user => {
-          return <RenderUser firstName={user.name.first} lastName={user.name.last} imageUrl = {user.picture.large}/>
+        <hr/>
+        </header>
+        { this.state.users.length < 1 ? "Loading..." :
+          this.state.users.map(user => {
+          return <RenderUser firstName={user.name.first} lastName={user.name.last} imageUrl = {user.picture.large} uniqueId = {user.name.first} handleOnClick={this.handleOnClickDiv} username={user.login.username}/>
         })}
       </main>
     );
